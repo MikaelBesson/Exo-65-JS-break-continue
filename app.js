@@ -1,15 +1,14 @@
 
 
-let elements = document.getElementsByClassName("paragraphe");
+let para = document.getElementsByClassName("paragraphe");
+console.log(para);
 
-let i = 0;
-
-    while (i<elements.length){
-        let element =elements[i];
-       element.innerHTML = "la variable i vaut " + i;
-       console.log(element);
-       i++;
-
+for (i = 0; i < para.length; i++) {
+    if (i === para.length - 1) {
+        break;
     }
-
-
+    if ((i % 2) === 0) {
+        continue;
+    }
+    para[i].innerHTML = "paragraphe " + i;
+}
